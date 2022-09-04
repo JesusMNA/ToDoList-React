@@ -1,0 +1,41 @@
+
+.TodoSearch-container {
+    width: 95%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #58b;
+}
+
+.TodoSearch-box {
+    width: 250px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.TodoSearch-button {
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.TodoSearch-input {
+    width: 210px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.8rem;
+    font-family: 'Comfortaa', cursive;
+}
+
+.TodoSearch-input:focus {
+    outline: none;
+}
