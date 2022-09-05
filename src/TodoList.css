@@ -1,7 +1,7 @@
 
 .TodoList-container {
     width: 95%;
-    height: 250px;
+    height: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,12 +9,12 @@
 }
 
 .TodoList-section {
-    width: 280px;
+    width: 300px;
     height: 220px;
-    border: 1px solid #5f5f5f;
-    box-shadow: 0px 0px 8px #444;
-    border-radius: 25px;
+    border-top: 3px solid #222;
+    border-bottom: 3px solid #222;
     overflow-y: auto;
+    box-shadow: 0px 0px 8px #444;
     display: flex;
     justify-content: center;
     padding: 12px;
