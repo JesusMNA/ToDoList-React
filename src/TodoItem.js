@@ -4,10 +4,6 @@ import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 export function TodoItem(props) {
 
-  const onDelete = () => {
-    alert('Eliminaste la tarea ' + props.text)
-  }
-
   return (
     <li className='TodoItem-li'>
       <span 
@@ -19,7 +15,7 @@ export function TodoItem(props) {
       <p className={`TodoItem-p ${props.completed && 'p-completed'}`}>{props.text}</p>
       <span 
         className='TodoItem-span__mark'
-        onClick={onDelete}
+        onClick={props.onDelete}
       >
         <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
       </span>
