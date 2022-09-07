@@ -6,6 +6,8 @@ import { TodoItem } from "../TodoItem";
 import React from "react";
 
 export function AppUi({
+  loading,
+  error,
   totalTodos,
   completedTodos,
   searchValue,
@@ -25,6 +27,10 @@ export function AppUi({
         setSearchValue={setSearchValue}
       />
       <TodoList>
+        {error && <p>There was a mistake</p>}
+        {loading && <p>Loading...</p>}
+        {(!loading && !searchTodos.lenght) && <p>Create your first To do</p>}
+
         {searchTodos.map(todo => (
           <TodoItem 
             key={todo.text} 
