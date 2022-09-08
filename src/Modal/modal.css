@@ -1,0 +1,82 @@
+.modal-addTodo {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container {
+    width: 500px;
+    min-width: 300px;
+    height: 400px;
+    background-color: #bbb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid #000;
+    box-shadow: 1px 2px 4px #ccc;
+}
+
+.modal-container p {
+    font-size: 28px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.modal-container input {
+    width: 280px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #000;
+    font-size: 20px;
+    text-align: center;
+}
+
+.modal-container input:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons-container button {
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+}
+
+.add {
+    background-color: #3c5;
+    border: 1px solid #2b4;
+}
+
+.add:hover {
+    box-shadow: 0px 0px 12px #000;
+}
+
+.cancel {
+    background-color: transparent;
+    color: #c35;
+    border: 2px solid #c35;
+    transition: all ease 700ms;
+}
+
+.cancel:hover {
+    background-color: #c35;
+    border: 2px solid #b24;
+    color: #fff;
+}
