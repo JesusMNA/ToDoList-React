@@ -1,0 +1,28 @@
+.LoadingTodo {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.LoadingTodo-containter {
+    width: 250px;
+    height: 47px;
+    background-color: #4f4f4f;
+    margin-bottom: 12px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #111;
+    box-shadow: 0px 0px 8px #444;
+    animation: skeleton-loading 1s  linear alternate;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

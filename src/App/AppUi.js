@@ -1,4 +1,5 @@
 import { TodoCounter } from "../TodoCounter";
+import { SqueletonLoading } from "../SqueletonLoading";
 import { TodoContext } from "../TodoContext";
 import { TodoSearch } from "../TodoSearch";
 import { TodoList } from "../TodoList";
@@ -24,7 +25,9 @@ export function AppUi() {
       <TodoSearch />
       <TodoList>
         {error && <p>There was a mistake</p>}
-        {loading && <p>Loading...</p>}
+        {loading && (
+          <SqueletonLoading></SqueletonLoading>
+        )}
         {(!loading && !searchTodos.length) && <p>Create your first To do</p>}
 
         {searchTodos.map(todo => (
