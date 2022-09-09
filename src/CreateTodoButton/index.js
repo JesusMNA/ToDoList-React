@@ -2,7 +2,6 @@ import './CreateTodoButton.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
-import { logDOM } from '@testing-library/react';
 import { TodoContext } from '../TodoContext';
 import React from 'react';
 
@@ -24,7 +23,7 @@ export function CreateTodoButton() {
   return(
     <div className="CreateTodoButton-container">
       <button 
-        className="CreateTodoButton-button CreateTodoButton-button--close"
+        className="CreateTodoButton-button"
         onClick={onCLick}
         id='createButtonTodo'
       >

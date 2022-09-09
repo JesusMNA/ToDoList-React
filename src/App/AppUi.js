@@ -25,7 +25,7 @@ export function AppUi() {
       <TodoList>
         {error && <p>There was a mistake</p>}
         {loading && <p>Loading...</p>}
-        {(!loading && !searchTodos.lenght) && <p>Create your first To do</p>}
+        {(!loading && !searchTodos.length) && <p>Create your first To do</p>}
 
         {searchTodos.map(todo => (
           <TodoItem 
