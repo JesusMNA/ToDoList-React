@@ -13,3 +13,7 @@
     color: #fff;
     text-align: center;
 }
+
+.TodoCounter-text--loading {
+    opacity: 25%;
+}

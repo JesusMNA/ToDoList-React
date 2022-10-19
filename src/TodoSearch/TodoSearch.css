@@ -41,3 +41,7 @@
 .TodoSearch-input:focus {
     outline: none;
 }
+
+.TodoSearch-input:disabled {
+    opacity: 25%;
+}
