@@ -2,12 +2,10 @@ import './CreateTodoButton.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
-import { TodoContext } from '../TodoContext';
 import React from 'react';
 
-export function CreateTodoButton() {
+export function CreateTodoButton({ setOpenModal, openModal }) {
 
-  const { setOpenModal, openModal } = React.useContext(TodoContext);
   const button = document.getElementById('createButtonTodo');
 
   const onCLick = () => {

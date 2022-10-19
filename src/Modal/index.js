@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { TodoContext } from '../TodoContext';
 import './modal.css'
 
-function Modal({ children }) {
+function Modal({ children, setOpenModal, addTodo }) {
 
   const [newTodoValue, setNewTodoValue] = React.useState('');
-  const { addTodo, setOpenModal } = React.useContext(TodoContext);
   const button = document.getElementById('createButtonTodo')
 
   const onSubmit = () => {

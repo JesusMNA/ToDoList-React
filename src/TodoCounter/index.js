@@ -1,9 +1,7 @@
-import { TodoContext } from '../TodoContext';
 import React from 'react';
 import './TodoCounter.css'
 
-export function TodoCounter() {
-  const { totalTodos, completedTodos } = React.useContext(TodoContext)
+export function TodoCounter({ totalTodos, completedTodos}) {
 
   return (
     <div className='TodoCounter-container'>
