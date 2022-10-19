@@ -1,12 +1,14 @@
 import React from "react";
 import { useTodos } from './useTodos';
 import { TodoCounter } from "../TodoCounter";
-import { SqueletonLoading } from "../SqueletonLoading";
 import { TodoSearch } from "../TodoSearch";
 import { TodoList } from "../TodoList";
 import { CreateTodoButton } from "../CreateTodoButton";
 import { TodoItem } from "../TodoItem";
 import { Modal } from "../Modal";
+import { TodosError } from "../TodosError"
+import { TodosLoading } from "../TodosLoading"
+import { EmptyTodos } from "../EmptyTodos"
 
 
 function App() {
@@ -36,14 +38,15 @@ function App() {
         searchValue={searchValue}
         setSearchValue={setSearchValue}
       />
-      <TodoList>
-        {error && <p>There was a mistake</p>}
-        {loading && (
-          <SqueletonLoading></SqueletonLoading>
-        )}
-        {(!loading && !searchTodos.length) && <p>Create your first To do</p>}
 
-        {searchTodos.map(todo => (
+      <TodoList 
+        error={error}
+        loading={loading}
+        searchTodos={searchTodos}
+        onError={() => <TodosError />}
+        onLoading={() => <TodosLoading />}
+        onEmptyTodos={() => <EmptyTodos />}
+        render={todo => (
           <TodoItem 
             key={todo.text} 
             text={todo.text} 
@@ -51,8 +54,9 @@ function App() {
             onComplete={() => completeTodo(todo.text)}
             onDelete={() => deleteTodo(todo.text)}
           />
-        ))}
-      </TodoList>
+        )}
+      />
+
       {!!openModal &&  (
         <Modal
           addTodo={addTodo}

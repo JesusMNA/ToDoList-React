@@ -10,14 +10,14 @@ export function TodoItem(props) {
         className={`TodoItem-span__check ${props.completed && 'icon-completed'}`}
         onClick={props.onComplete}
       >
-        <FontAwesomeIcon icon={faCheck}></FontAwesomeIcon>
+        <FontAwesomeIcon icon={faCheck} className={'icon-mark'}></FontAwesomeIcon>
       </span>
       <p className={`TodoItem-p ${props.completed && 'p-completed'}`}>{props.text}</p>
       <span 
         className='TodoItem-span__mark'
         onClick={props.onDelete}
       >
-        <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
+        <FontAwesomeIcon icon={faXmark} className={'icon-mark'}></FontAwesomeIcon>
       </span>
     </li>
   );
